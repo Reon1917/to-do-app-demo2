@@ -35,15 +35,7 @@ export default function CollectionBookmarkList({
     try {
       const { data, error } = await supabase
         .from('bookmark_collections')
-        .select(`
-          bookmark_id,
-          bookmark:bookmarks (
-            id,
-            title,
-            url,
-            category
-          )
-        `)
+        .select('bookmark_id, bookmark:bookmarks (id, title, url, category)')
         .eq('collection_id', collectionId)
         .order('bookmark_id')
 

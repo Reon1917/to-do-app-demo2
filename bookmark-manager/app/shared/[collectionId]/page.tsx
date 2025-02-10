@@ -26,7 +26,7 @@ export default async function SharedCollectionPage({
 
   const { data: bookmarks } = await supabase
     .from('bookmark_collections')
-    .select(\`
+    .select(`
       bookmark_id,
       bookmarks (
         id,
@@ -34,7 +34,7 @@ export default async function SharedCollectionPage({
         url,
         category
       )
-    \`)
+    `)
     .eq('collection_id', collectionId)
 
   return (
