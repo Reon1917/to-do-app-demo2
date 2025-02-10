@@ -40,6 +40,9 @@
   - [x] Converted pages to server components
   - [x] Separated client and server code
   - [x] Added proper loading states with Suspense
+  - [x] Fixed UI component imports in CollectionCard
+  - [x] Added date-fns dependency
+  - [x] Fixed CollectionBookmarkList type issues
 
 ### Current Tasks
 - [ ] Polish & Optimization

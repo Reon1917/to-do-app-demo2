@@ -41,7 +41,12 @@ export default function CollectionBookmarkList({
 
       if (error) throw error
 
-      setBookmarks(data || [])
+      const formattedData: CollectionBookmark[] = data?.map(item => ({
+        bookmark_id: item.bookmark_id,
+        bookmark: Array.isArray(item.bookmark) ? item.bookmark[0] : item.bookmark
+      })) || []
+
+      setBookmarks(formattedData)
     } catch (error) {
       console.error('Error fetching collection bookmarks:', error)
     } finally {

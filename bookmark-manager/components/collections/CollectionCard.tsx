@@ -3,7 +3,12 @@
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, Button, MoreHorizontal } from '@/components/ui'
+import { DropdownMenu } from '@/components/ui/dropdown-menu'
+import { DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { DropdownMenuContent } from '@/components/ui/dropdown-menu'
+import { DropdownMenuItem } from '@/components/ui/dropdown-menu'
+import { Button } from '@/components/ui/button'
+import { MoreHorizontal } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 
 interface CollectionProps {
